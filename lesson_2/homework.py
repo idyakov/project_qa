@@ -1,5 +1,5 @@
 # Homework Lesson 2 - Numbers - Homework
-
+import math
 # READ CAREFULLY THE EXERCISE DESCRIPTION AND SOLVE IT RIGHT AFTER IT
 
 # ---------------------------------------------------------------------
@@ -19,21 +19,19 @@ print(total_cost)
 # he will be driving. He will travel at an average speed of 60 miles
 # per hour and has 4 hours available for driving. Calculate the
 # total distance he can cover and print the result.
-
 average_speed = 60
 hours_available = 4
-total_distance = ??? # calculate here
-print(???)  # print the result
+total_distance = average_speed * hours_available  # calculate here
+print(total_distance)  # print the result
 
 # ---------------------------------------------------------------------
 # Exercise 2 - Pizza Slices
 # A pizza is cut into 8 equal slices. Calculate and print how many
 # slices each person will get if there are 4 people sharing the pizza.
-
-pizza_slices = ???
-people = ???
-slices_per_person = ???
-print(???)
+pizza_slices = 8
+people = 4
+slices_per_person = round(pizza_slices / people)
+print(slices_per_person)
 
 # ---------------------------------------------------------------------
 # Exercise 3 - Shopping Discount
@@ -45,7 +43,12 @@ print(???)
 # print the result.
 # The formula to count the discounted price:
 # multiply the original price by the discount percentage and divide by 100.
-
+original_price = 80
+discount_percentage = 20
+final_price = (original_price*discount_percentage)/100
+print("Discount is ", round(final_price))
+total= original_price - final_price
+print("the price Lisa has to pay ", round(total))
 
 # ---------------------------------------------------------------------
 # Exercise 4 - Temperature Conversion
@@ -54,7 +57,9 @@ print(???)
 # temperature and print the result.
 # To convert Celsis to Fahrenheit you need to multiply
 # the temperature in Celsius by 9/5 and add 32 to the result
-
+num_1 = int(input("Please input value of Celsium: "))
+temp = (num_1 * (9 / 5)) + 32
+print("Fahrenheit: ", temp)
 
 # ---------------------------------------------------------------------
 # Exercise 5 - Gardening
@@ -63,7 +68,8 @@ print(???)
 # and print the area of the flowerbed.
 # To calculate the area of a circle, multiply π (~3.141) with the square of
 # the circle's radius.
-
+flowerbed = round(3.5 * 3.141, 2)
+print("The radius is: ", flowerbed)
 
 # ---------------------------------------------------------------------
 # Exercise 6 - Convert Temperature
@@ -73,15 +79,19 @@ print(???)
 # Your task is to convert the float temperature to an integer
 # temperature for display.
 # As an example, if the temperature is 24.8ºC, you need to print 24.
-
-
+temp = float("24.8")
+rounded_down = math.floor(temp)
+print(rounded_down)
 # ---------------------------------------------------------------------
 # Exercise 7 - Baking Cookies
 # You are baking cookies and have 17 chocolate chips. You
 # want to distribute them evenly into 5 cookies. Calculate and
 # print the number of chocolate chips in each cookie and the
 # remaining chips.
-
+chips = 17
+cookies = 5
+item = cookies / chips
+print(round(item, 2))
 
 # ---------------------------------------------------------------------
 # Exercise 8 - Fix the Code - Event total earnings
@@ -99,11 +109,11 @@ print(???)
 #
 # For the values provided we are expecting a total earning of 750000,
 # however the code is not working correctly. Can you fix it?
-1st_event_participants = 250
-2nd_event_participants = 500
-ticket_$ = 1000
+first_event_participants = 250
+second_event_participants = 500
+ticket = 1000
 
-total_earnings = (1st_event_total + 2nd_event_total) * ticket_$
+total_earnings = (first_event_participants + second_event_participants) * ticket
 print(total_earnings)
 
 
@@ -129,8 +139,8 @@ student_1_age = 15
 student_2_age = 17
 student_3_age = 13
 
-students_age_mean = student_1_age + student_2_age + student_3_age / 3
-print(students_mean_age)
+students_age_mean = (student_1_age + student_2_age + student_3_age) / 3
+print(round(students_age_mean))
 
 # ---------------------------------------------------------------------
 # Challenge (OPTIONAL!): Separating Digits of a Number
@@ -149,10 +159,10 @@ print(students_mean_age)
 #
 # The following code should help you to get an understanding on
 # how to get the digits of the number
-number = 1597
+#number = 1597
 
-digit_1 = number % 10
-number = number // 10
+#digit_1 = number % 10
+#number = number // 10
 
 # print(digit_1) # will print 7
 # print(number)  # will print 159
@@ -162,7 +172,35 @@ number = number // 10
 # Your code here
 
 # Print the result for all four digits
-print(digit_1)
-print(digit_2)
-print(digit_3)
+#print(digit_1)
+#print(digit_2)
+#print(digit_3)
+#print(digit_4)
+
+
+number = 1597
+
+digit_1 = number % 10
+number = number // 10
+
+digit_2 = number % 10
+number = number // 10
+
+digit_3 = number % 10
+number = number // 10
+
+digit_4 = number % 10
+number = number // 10
+# print(digit_1) # will print 7
+# print(number)  # will print 159
+
+# If you repeat this operation with the second, the third and
+# the fourth digits, you will be able to get all the digits.
+# Your code here
+
+# Print the result for all four digits
+
 print(digit_4)
+print(digit_3)
+print(digit_2)
+print(digit_1)
