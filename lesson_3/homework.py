@@ -181,7 +181,7 @@ print(f'Hello {name}, you are the best memeber in our fitness clus, your current
 # ---------------------------------------------------------------------
 # Challenge 1 (OPTIONAL!): Reverse the negative integer -324 and keep
 # the negative symbol. Expected output: -423
-input_number = -324
+
 
 # Convert the integer to a string to handle the negative symbol separately
 num_str = str(input_number)
@@ -197,6 +197,10 @@ reversed_num = int(num_str[0] + reversed_str)
 
 # Output the result
 # (ADD YOUR CODE BELOW)
+input_number = -324
+output_number=int(str(input_number)[0] + str(input_number)[:0:-1])
+print(output_number)
+
 
 # ---------------------------------------------------------------------
 # Challenge 2 (OPTIONAL!): Formatting Average Speed
@@ -238,3 +242,10 @@ average_speed = miles / hours
 rounded_speed = ????
 
 print(f"The average speed is {rounded_speed} miles per hour")
+
+# Output the result
+miles = float(input("Please input the number of miles: "))
+hours = int(input("Please input the number of hours: "))
+average = miles / hours
+rounded_speed  = round(average, 1)
+print(f'The average speed is {rounded_speed} miles per hour')
