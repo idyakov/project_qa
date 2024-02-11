@@ -10,7 +10,7 @@
 # Example Input: "Alice"
 # Example Output: "Hello, Alice!"
 name = input("Enter yor name: ")
-print(f"????")
+print("Hello",name)
 
 # ---------------------------------------------------------------------
 # Exercise 2: Greeting with User's Favorite Activity
@@ -23,7 +23,19 @@ print(f"????")
 # Name: Emily
 # Favorite Activity: hiking
 # Example Output: "Hello, Emily! Enjoy hiking!"
+name = input("Enter your name please: ")
+activity = input("Tell us about your activity: ")
+print("Hello,", name,"! You can join to our club of",activity," any time")
 
+result = f"Hello {name}!. You can join to our club of,{activity}!"
+print(result)
+
+
+#another exemple with
+activity = input ("What is the best your activity: ")
+name = input("Enter your name here ")
+result = f"Hello {name}!. You can join to our club of {activity}!"
+print(result)
 
 # ---------------------------------------------------------------------
 # Exercise 3: Membership Cards
@@ -33,11 +45,12 @@ print(f"????")
 # Write a program that takes the new member's name as
 # input and prints it in uppercase and prints a welcome message
 # using .format()
-
 # Example Input:
 # Name: Emily
 # Example Output: "Welcome, Emily! Your name in uppercase is: EMILY!"
-
+text = input("Please enter your registered name:")
+result = f'Welcome {text}! Your name in uppercase is: {text.upper()}'
+print(result)
 
 # ---------------------------------------------------------------------
 # Exercise 4: User Profile Creation
@@ -53,7 +66,35 @@ print(f"????")
 # Example Output:
 # Name: John Smith
 # Age: 28
+#Upper Formatting
+#Input
+f_name = input("Input your first name in lowercase format: ")
+l_name = input("Input you last name in lowercase format: ")
+Age = input("Input your a year of your birthday please: ")
+text_age = 2024 - int(Age)
+print("First name: ", f_name.upper())
+print("Last naem: ", l_name.upper())
+print("Your Age is:", text_age)
 
+#Title Formatting
+#Input
+f_name = input("Input your first name in lowercase format: ")
+l_name = input("Input you last name in lowercase format: ")
+Age = input("Input your a year of your birthday please: ")
+text_age = 2024 - int(Age)
+print("First name: ", f_name.title())
+print("Last naem: ", l_name.title())
+print("Your Age is:", text_age)
+
+#Title Formatting
+#Input
+f_name = input("Input your first name in lowercase format: ")
+l_name = input("Input you last name in lowercase format: ")
+Age = input("Input your a year of your birthday please: ")
+text_age = 2024 - int(Age)
+print("First name:", format(f_name.title()))
+print("Last name:", format(l_name.title()))
+print("Your Age is:", format(text_age))
 
 # ---------------------------------------------------------------------
 # Exercise 5: Text message limits
@@ -64,7 +105,9 @@ print(f"????")
 # in the message, including spaces, and format the output using
 # an f-string. This character count will help users ensure their
 # messages fit within the allowed limit.
-
+message = str(len(input('Please input your message: ')))
+name = str(len(input('Please input your name: ')))
+print(f'The number of character in your message are: {message} and your name charactes are: {name}')
 
 # ---------------------------------------------------------------------
 # Exercise 6: Text Transformation Game
@@ -74,8 +117,10 @@ print(f"????")
 #
 # Example Input: "Hello, world!"
 # Example Output: "H*ll*, w*rld!"
-sentence = input("Enter a sentence: ")
-transformed_sentence = sentence.replace('a', '*')
+message = input("Enter a sentence: ")
+transformed_sentence = message.replace('o', '*')
+transformed_sentence_q = transformed_sentence.replace('a', '*')
+print(transformed_sentence_q)
 
 
 # ------------------------------# ---------------------------------------------------------------------
@@ -90,7 +135,11 @@ transformed_sentence = sentence.replace('a', '*')
 # Name: Lucy Smith
 # Age: 28
 
-
+data = "lucy smith:28"
+sliced_text = data[0:4]
+sliced_text_q = data[11:13]
+print("Name: ", sliced_text.title())
+print("Age: ", sliced_text_q.format())
 # ---------------------------------------------------------------------
 # Exercise 8: Miles to Kilometers Conversion
 # Write a program that converts a distance in miles to kilometers.
