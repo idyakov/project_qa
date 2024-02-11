@@ -140,6 +140,7 @@ sliced_text = data[0:4]
 sliced_text_q = data[11:13]
 print("Name: ", sliced_text.title())
 print("Age: ", sliced_text_q.format())
+
 # ---------------------------------------------------------------------
 # Exercise 8: Miles to Kilometers Conversion
 # Write a program that converts a distance in miles to kilometers.
@@ -153,8 +154,9 @@ print("Age: ", sliced_text_q.format())
 # We are converting the input string to float:
 # Input: float("1.23")
 # Output: 1.23
-miles = float(input("Enter distance in miles: "))
-
+distance = float(input("Please input your number of miles: "))
+miles = distance * 1.6
+print(f' The numbers of miles is: {distance} and this is approximatly amount of kilometers: {miles}' )
 
 # ---------------------------------------------------------------------
 # Exercise 9: Workouts calculator
@@ -167,6 +169,13 @@ miles = float(input("Enter distance in miles: "))
 # motivational message using an f-string that encourages the user
 # to stay consistent and reach their fitness goals. Display the
 # motivational message to the user.
+name = input("Please input your name: ")
+cardio = int(input("Please input the number of minutes in cardio: "))
+strenght = int(input("Please input the number of minutes in strenght training: "))
+yoga = int(input("Please input the number of minutes in yoga: "))
+activities = int(cardio+strenght+yoga)
+goal = 120 - activities
+print(f'Hello {name}, you are the best memeber in our fitness clus, your current number of activities is: {activities}.Please keep going and do not stop, to reach the best number of activity left {goal}. The goal is 120 minutes for today!')
 
 
 # ---------------------------------------------------------------------
