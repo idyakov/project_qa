@@ -78,7 +78,7 @@ print("The radius is: ", flowerbed)
 # temperature data you received from the weather service is a float.
 # Your task is to convert the float temperature to an integer
 # temperature for display.
-# As an example, if the temperature is 24.8ºC, you need to print 24.
+# As an example, if the temperature is 24.8ºC, you need to print 24.#
 temp = float("24.8")
 rounded_down = math.floor(temp)
 print(rounded_down)
