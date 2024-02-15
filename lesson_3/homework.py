@@ -233,7 +233,7 @@ print(output_number)
 # Taking input for miles and hours
 miles = int(input("Enter the number of miles: "))
 hours = int(input("Enter the total number of hours: "))
-
+#
 # Calculating average speed
 average_speed = miles / hours
 
