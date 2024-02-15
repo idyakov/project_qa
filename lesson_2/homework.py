@@ -82,7 +82,7 @@ print("The radius is: ", flowerbed)
 temp = float("24.8")
 rounded_down = math.floor(temp)
 print(rounded_down)
-# ---------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # Exercise 7 - Baking Cookies
 # You are baking cookies and have 17 chocolate chips. You
 # want to distribute them evenly into 5 cookies. Calculate and
