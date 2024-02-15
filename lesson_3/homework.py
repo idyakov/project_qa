@@ -236,11 +236,11 @@ hours = int(input("Enter the total number of hours: "))
 #
 # Calculating average speed
 average_speed = miles / hours
-
+#
 # Formatting and displaying the result
 # (Your code here)
 rounded_speed = ????
-
+#
 print(f"The average speed is {rounded_speed} miles per hour")
 
 # Output the result
