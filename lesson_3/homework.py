@@ -229,7 +229,7 @@ print(output_number)
 # https://docs.python.org/3/library/string.html#format-examples
 # Experiment with different formatting options to achieve the
 # desired presentation of the average speed.
-
+#
 # Taking input for miles and hours
 miles = int(input("Enter the number of miles: "))
 hours = int(input("Enter the total number of hours: "))

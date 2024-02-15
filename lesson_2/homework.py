@@ -90,8 +90,8 @@ print(rounded_down)
 # remaining chips.
 chips = 17
 cookies = 5
-item = cookies / chips
-print(round(item, 2))
+item = chips / cookies
+print(item)
 
 # ---------------------------------------------------------------------
 # Exercise 8 - Fix the Code - Event total earnings

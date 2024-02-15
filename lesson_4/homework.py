@@ -7,9 +7,17 @@
 # You're developing a weather application. Write a program that takes 
 # a temperature in Fahrenheit as input. If the temperature is above 
 # 85°F, print "Hot day ahead!".
-temperature = int(input("Enter the temperature in Fahrenheit: "))
 
 # <Your code here>
+temperature = int(input("Enter the temperature in Fahrenheit: "))
+if temperature >= 85:
+    print('Hot day ahead')
+elif temperature <=0:
+    print('It is too cold outside')
+elif temperature <85:
+    print('Temperature is normal')
+else:
+    print('What is the temperature? you did not enter the number')
 
 # ---------------------------------------------------------------------
 # Exercise 2: Grade Classifier
@@ -20,7 +28,11 @@ temperature = int(input("Enter the temperature in Fahrenheit: "))
 # you need to convert it so you can use the value as a number.
 
 # <Your code here>
-
+score = int(input('Please type your score: '))
+if score >= 50:
+    print('pass, "Congratulation"')
+elif score <=50:
+    print('Fail, Keep going practice')
 # ---------------------------------------------------------------------
 # Exercise 3: Scholarship Eligibility
 # Your university offers scholarships based on academic performance.
@@ -33,31 +45,41 @@ temperature = int(input("Enter the temperature in Fahrenheit: "))
 # you need to convert it so you can use the value as a number.
 # The function int() converts the number to an integer, and the function
 # float() converts the number to a float.
-
-gpa = float(input("Enter your GPA: "))
-
 # <Your code here>
-
+gpa = float(input("Enter your GPA: "))
+if gpa >= 3.5:
+    print('Congratulations, you are eligible for a scholarship!')
+elif 3.0 <= gpa and gpa <= 3.49:
+    print('You are on the waiting list.')
+else:
+    print('Keep up the good work.')
 # ---------------------------------------------------------------------
 # Exercise 4: Shopping Discount
 # A store is offering a discount on a product. Write a program that
 # takes the original price and the discount percentage as input.
 # If the discounted price is less than $50, print "Great deal!".
 # Otherwise, print "Might want to wait for a better offer."
-original_price = float(input("Enter product original price: "))
-discount_percentage = float(input("Enter discount percentage: "))
-
-discounted_price = # calculate the discounted price here
 
 # <Your code here>
-
+original_price = float(input("Enter product original price: "))
+discount_percentage = float(input("Enter discount percentage: "))
+discounted_price =  (original_price * discount_percentage) / 100
+if discounted_price <= 50:
+    print('Great deal!')
+else:
+    print("Might want to wait for a better offer.")
 # ---------------------------------------------------------------------
 # Exercise 5: Movie Night Decision
 # You and your friends are deciding on a movie to watch. Write a
 # program that takes two movie ratings as input. If both ratings
 # are above 7, print "Let's watch both!". Otherwise,
 # print "Let's just pick one."
-
+friend_rating_1 = int(input('Please rate the movie Spyder Man'))
+friend_rating_2 = int(input('Please rate the movie Hulk'))
+if friend_rating_1 == 7 and friend_rating_2 == 7:
+    print("Let's watch both!")
+else:
+    print("Let's just pick one.")
 # <Your code here>
 
 # ---------------------------------------------------------------------
