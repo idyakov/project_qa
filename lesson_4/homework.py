@@ -6,7 +6,7 @@
 # Exercise 1: Temperature Classification
 # You're developing a weather application. Write a program that takes 
 # a temperature in Fahrenheit as input. If the temperature is above 
-# 85°F, print "Hot day ahead!".#
+# 85°F, print "Hot day ahead!".
 
 # <Your code here>
 temperature = int(input("Enter the temperature in Fahrenheit: "))
@@ -91,13 +91,7 @@ else:
 # For other cases, recommend a casual dining place.
 
 # <Your code here>
-question_1 = int(input("Hello sir. Could you please rate your mood today between 1 (sad) and 5 (happy)"))
-question_2 = int(input("Could you please rate hungry level between 1 and 5? "))
-if question_1 >= 1 and question_1 <= 3:
-    if question_2 >= 1 and question_2 <= 3:
-        print('We recommend comfort food')
-elif question_1 == 5 and question_1 <= 5:
-    print('We recommend a fancy restaurant')
+
 # ---------------------------------------------------------------------
 # Exercise 7: Exercise 7: Tax Bracket Calculator
 # You're building a tax calculation system. Write a program that
@@ -114,16 +108,7 @@ elif question_1 == 5 and question_1 <= 5:
 annual_income = float(input("Enter your annual income: "))
 
 # <Your code here>
-income_annual = float(input('Please enter your annual income: '))
-if income_annual >= 40000 and income_annual <= 100000:
-    tax_amount = (income_annual / 100 ) * 20
-        print(f"Your tax amount is ${tax_amount}")
-if income_annual <= 39999:
-    tax_amount = (income_annual / 100 ) * 20
-        print(f"Your tax amount is ${tax_amount}")
-if income_annual > 100000:
-    tax_amount = (income_annual / 100 ) * 30
-        print(f"Your tax amount is ${tax_amount}")
+
 # Print tax amount
 print(f"Your tax amount is ${tax_amount}")
 
