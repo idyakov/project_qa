@@ -90,7 +90,7 @@ else:
 # a fancy restaurant. If they're sad and hungry, recommend comfort food.
 # For other cases, recommend a casual dining place.
 
-# <Your code here>
+# <Your code here>#
 
 # ---------------------------------------------------------------------
 # Exercise 7: Exercise 7: Tax Bracket Calculator
