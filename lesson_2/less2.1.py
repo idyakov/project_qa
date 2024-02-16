@@ -3,7 +3,7 @@ item2_price = 3
 total_cost = item1_price + item2_price
 print(total_cost)
 
-
+#
 average_speed = 60
 hours_available = 4
 total_distance = average_speed * hours_available  # calculate here

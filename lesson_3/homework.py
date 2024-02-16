@@ -218,12 +218,12 @@ print(output_number)
 # If the driver covered 60 miles in 3 hours, the calculated average
 # speed is 20.0 miles per hour. However, we want to display it as
 # 'The average speed is 20.0 miles per hour'.
-#
+##
 # Similarly, for 55 miles and 3 hours, the calculated speed is
 #  approximately 18.33333333332, but we want to format and display
 #  it as 'The average speed is 18.3 miles per hour'.
 #
-# Hints:
+# Hints:##
 # Refer to the "Format examples" section in the official Python
 # documentation for string formatting techniques:
 # https://docs.python.org/3/library/string.html#format-examples

@@ -6,3 +6,11 @@
 # 5 => -5
 # -1 => -1
 
+
+number = int(input('Input the number which you are going to make it negative: '))
+if number > 0:
+    print(number * -1)
+elif number < 0:
+    print(number)
+
+

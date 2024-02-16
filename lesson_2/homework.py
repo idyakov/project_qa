@@ -56,7 +56,7 @@ print("the price Lisa has to pay ", round(total))
 # from Celsius to Fahrenheit for display. Convert a given
 # temperature and print the result.
 # To convert Celsis to Fahrenheit you need to multiply
-# the temperature in Celsius by 9/5 and add 32 to the result
+# the temperature in Celsius by 9/5 and add 32 to the result#
 num_1 = int(input("Please input value of Celsium: "))
 temp = (num_1 * (9 / 5)) + 32
 print("Fahrenheit: ", temp)
@@ -78,11 +78,11 @@ print("The radius is: ", flowerbed)
 # temperature data you received from the weather service is a float.
 # Your task is to convert the float temperature to an integer
 # temperature for display.
-# As an example, if the temperature is 24.8ºC, you need to print 24.#
+# As an example, if the temperature is 24.8ºC, you need to print 24.##
 temp = float("24.8")
 rounded_down = math.floor(temp)
 print(rounded_down)
-# -----------------------------------------------------------------------##
+# -----------------------------------------------------------------------###
 # Exercise 7 - Baking Cookies
 # You are baking cookies and have 17 chocolate chips. You
 # want to distribute them evenly into 5 cookies. Calculate and
