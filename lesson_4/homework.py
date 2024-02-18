@@ -91,7 +91,14 @@ else:
 # For other cases, recommend a casual dining place.
 
 # <Your code here>###
-
+mood_level = int(input('Please rate your mood between happy 5  and sad 1'))
+hunger_level = int(input('Please rate your hunger level between high  - number 5 and low number 1'))
+if mood_level == 5 and hunger_level == 5:
+    print('We recommend a casual dining place')
+elif mood_level >= 2 and hunger_level >= 2:
+    print('We recommend comfort food')
+else:
+    print('We recommend a casual dining place')
 # ---------------------------------------------------------------------
 # Exercise 7: Exercise 7: Tax Bracket Calculator
 # You're building a tax calculation system. Write a program that
@@ -105,12 +112,17 @@ else:
 # Remember that a tax rate of 10% can be represented as 10/100 or 0.1
 
 # Print the calculated tax amount for the given income.
-annual_income = float(input("Enter your annual income: "))
-
 # <Your code here>
-
-# Print tax amount
-print(f"Your tax amount is ${tax_amount}")
+annual_income = float(input("Enter your annual income: "))
+if annual_income <= 40000:
+    tax_count = (annual_income / 100) * 10
+    print(f'Your annual income is {tax_count} dollars and tax 10%')
+elif annual_income >= 40000 and annual_income <= 100000:
+    tax_count = (annual_income / 100) * 20
+    print(f'Your annual income is {tax_count} dollars and tax 20%')
+else:
+    tax_count = (annual_income / 100) * 30
+    print(f'Your annual income is {tax_count} dollars and tax 30$')
 
 # ---------------------------------------------------------------------
 # Exercise 8: Ticket Pricing System
@@ -123,7 +135,15 @@ print(f"Your tax amount is ${tax_amount}")
 # Print the calculated ticket price for the given age.
 
 # <Your code here>
-
+age = int(input('How old are you? '))
+if age >= 3 and age <= 12:
+    print(f'Your ticket price is $10')
+elif age >= 12 and age < 64:
+    print(f'Your ticket price is $20')
+elif age <= 2:
+    print('Your ticket price is $0 go with your Mom')
+else:
+    print(f'Your ticket price is $15')
 # ---------------------------------------------------------------------
 # Exercise 9: Password Strength Checker
 # Create a program that takes a password as input and checks its
@@ -135,10 +155,18 @@ print(f"Your tax amount is ${tax_amount}")
 
 # You can use len() function to get the length of a given string.
 
-password = input("Enter your password: ")
+
+
 
 # <Your code here>
-
+password = input("Enter your password: ")
+counter = len(str(password))
+if counter >=8 and counter <=11:
+    print('Moderate password.')
+elif counter <8:
+    print('Weak password')
+else:
+    print('Strong password')
 # ---------------------------------------------------------------------
 # CHALLENGE (OPTIONAL): Course Enrollment Eligibility
 # To solve this exercise, you will need to use the following concepts
@@ -189,3 +217,17 @@ if course_suffix == "101":
 elif course_suffix == "202":
     ...  # <Your code here>
 # <Your code here>
+# Print either "You are eligible to enroll." or "You are not eligible to enroll."
+# Print either "You are eligible to enroll." or "You are not eligible to enroll."
+course_code = input("Enter the course code: ")
+student_grade = input("Enter your the following grade:  A, B, C, D, F: ")
+student_grade_q = course_code.upper()[-3:]
+grade_suffix = student_grade.upper()
+if student_grade_q == 101 and grade_suffix == "A" or grade_suffix == "B":
+    print('You are eligible to enroll.')
+elif student_grade_q == 202 and grade_suffix == "B" or grade_suffix == "C":
+    print('You are eligible to enroll.')
+elif student_grade_q == 303 and grade_suffix == "C" or grade_suffix == "D":
+    print('You are eligible to enroll.')
+else:
+    print('You are not eligible to enroll.')
