@@ -127,20 +127,25 @@ print("Reversed numbers: ",numbers)
 
 # - `work_days` contains the work week days (Mon-Fri) 
 # - `rest_days` contains the weekend days (Sat-Sun)
-
-# Create a third list that contains the _concatenation_ of the previous two. 
+work_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+rest_day = ['Saturday', 'Sunday']
+# Create a third list that contains the _concatenation_ of the previous two.
+full_week = work_days + rest_day
 # Call it 'full_week'
-
+print(full_week)
 # Now, write python code that prints a slice from 'full_week' with the work days.
-
 # work_days = ['mon', 'tue',  'wed', 'thu', 'fri']
+slice_week = full_week[0:5]
+print('work_days = ', slice_week)
 # rest_days = ['sat', 'sun']
-
+rest_days = full_week[5:7:]
+print('rest_days = ', rest_days)
 # Concatenate work_days and rest_rays
-# full_week = ???
+full_week = slice_week + rest_days
+print(full_week)
 
 # Slice with the work days
-# print(full_week[???])
+print(full_week[0:5])
 
 # ---------------------------------------------------------------------
 # Task 7. Aggregators and Helpers
@@ -153,33 +158,36 @@ print("Reversed numbers: ",numbers)
 # - How many times is the number 9 in the list?
 # - How many total elements are in the list?
 
-# numbers = [6, 34, 17, 9, 2, 11, 57, 9, 32]
+numbers = [6, 34, 17, 9, 2, 11, 57, 9, 32]
 
 # Lowest number
-# print(???(numbers))
+print(min(numbers))
 
 # Highest number
-# print(???(numbers))
+print(max(numbers))
 
 # Sum of everything
-# print(???(numbers))
+print(sum(numbers))
 
 # Count number 9s
-# print(numbers.???(???))
+print(numbers.count(9))
 
 # Total number of elements
-# print(???(numbers))
+print(len(numbers))
 
 ## Exercises 🏋🏻
 
 # ---------------------------------------------------------------------
-# Exercise 1. The Biography Creator
+#7# Exercise 1. The Biography Creator
 
 # Create a program that will ask you for the following items and stores them in a list for later usage:
 
 # - Your Name
+your_name = input("Please enter your name: ")
 # - Your Age
+your_age = input("Please enter your age: ")
 # - The name of the city where you were born
+your_city = input("Please enter your city: ")
 
 # The program should use a variable with a string that will be used as a template. 
 # This template should be a sentence that can be used to build the person's biography.
@@ -187,31 +195,33 @@ print("Reversed numbers: ",numbers)
 # Fox example:
 
 # biography = "My name is <NAME>, I'm <AGE> years old and I was born in <CITY>."
-        
+
 # Tips: 
 # - Use f-strings with placeholders to build the actual template, with elements of the list as values.
 # - Use input() to gather the data.
 # - Use print() at the end, to show the user's biography.
+biography = (f"My name is {your_name}, I'm {your_age} years old and I was born in {your_city}.")
+print(biography)
 
 # Declare an empty list
-# user_data = []
+user_data = []
 
 # Gather user input
-# name = input("Name: ")
-# age = input("Age: ")
-# city = input("City: ")
+name = input("Name: ")
+age = input("Age: ")
+city = input("City: ")
 
 # Add user input to the list
-# user_data.???(name)
-# user_data.???(age)
-# user_data.???(city)
+user_data.append(name)
+user_data.append(age)
+user_data.append(city)
 
 # Declare your template. Use list elements as values.
-# biography = f"???"
-
+biography = (f"My name is {name}, I'm {age} years old and I was born in {city}.")
+print(user_data)
 # Show the user's biography
 # print(biography)
-
+print(biography)
 # ---------------------------------------------------------------------
 # Exercise 2. The Card Deck ♦️♥️♠️♣️
 
@@ -223,31 +233,35 @@ print("Reversed numbers: ",numbers)
 # 🔥 Tip: You might want to stitch them together first.
 
 # Here are the card decks.
-# numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-# faces = ['J', 'Q', 'K']
+numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+faces = ['J', 'Q', 'K']
 
 # Concatenate them first.
-# card_deck = ???
-
+card_deck = numbers + faces
+print(card_deck)
 # Print out the numbers 1 to 6.
-# print(card_deck[???])
+print(card_deck[0:6])
 
 # Print out the last 3. Do it using POSITIVE indexes.
-# print(card_deck[???])
+print(card_deck[10:13])
 
 # Print out the last 3 (same as before), but using NEGATIVE indexes.
-# print(card_deck[???])
+print(card_deck[-3:13])
 
 # Print out everything EXCEPT the first and last.
-# print(card_deck[???])
+print(card_deck[1:12])
 
 # What would you use so the printout includes the following:
 # Hint: It's every third card of the full deck.
 # ['1', '4', '7', '10', 'K']
-# print(card_deck[???])
+ print(card_deck[::3])
 
 # Print out the EVEN numbers. No faces.
-# print(???)
+numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+res = [eval(i) for i in numbers]
+for x in res:
+    if x % 2 == 0:
+        print(x)
 
 # ---------------------------------------------------------------------
 # Exercise 3. The Steps Tracker 👟
