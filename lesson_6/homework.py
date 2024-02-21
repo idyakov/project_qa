@@ -99,20 +99,26 @@ if 'cheese' in pantry:
 
 # Given the provided list, write code that sorts and reverses it, as required.
 
-# numbers = [6, 34, 17, 9, 2, 11, 57, 9, 32]
+numbers = [6, 34, 17, 9, 2, 11, 57, 9, 32]
+numbers.sort()
+print("Sorted numbers: ",numbers)
+numbers.reverse()
+print("Reversed numbers: ",numbers)
 
 # Write code that sorts the list in ascending order without disturbing the original.
-# sorted_numbers = ???(numbers)
-
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
 # Write code that reverses (flips) the list without disturbing the original.
 # Remember that in this case, casting is required.
-# reversed_numbers = ???(???(numbers))
+reversed_numbers = sorted(reversed(numbers))
 
 # Write code that sorts the list in place, modifying the original.
-# numbers.s???()
+numbers.sort()
+print("Sorted numbers: ",numbers)
 
 # Write code that reverses (flips) the list in place, modifying the original.
-# numbers.r???()
+numbers.reverse()
+print("Reversed numbers: ",numbers)
 
 # ---------------------------------------------------------------------
 # Task 6. Stitching and Slicing
