@@ -46,25 +46,34 @@ third_friend_age = list_3
 second_friend_name_q = str(second_friend_name[1])
 second_friend_age = str(second_friend_name[1])
 third_friend_age = str(second_friend_name[2])
-print('The second name of your friend is: ', second_friend_name_q[2:11])
-print('The age of your third friend is: ', third_friend_age[11:17])
+print('(slice method) The second name of your friend is: ', second_friend_name_q[2:11])
+print('(slice method) The age of your third friend is: ', third_friend_age[11:17])
+
+second_friend_name = list_3[1][0]
+third_friend_age = list_3[2][1]
+print('(list method) The second name of your friend is: ', second_friend_name)
+print('(list method) The age of your third friend is: ', third_friend_age)
 
 # Age of the last friend of the list
-# last_friend_age = list_3[???][???]
+last_friend_age = list_3[2][1]
+print("Age of the last friend is: ", last_friend_age)
 
 # ---------------------------------------------------------------------
 # Task 3. Remove elements from a List
 
 # From the lists provided, remove the requested elements. Easy peazy.
 
-# cities = ["Houston", "Dallas", "Austin"]
-# fruits = ["apple", "banana", "orange"]
+cities = ["Houston", "Dallas", "Austin"]
+fruits = ["apple", "banana", "orange"]
 
 # Remove Austin from cities without using its index
-# cities.remove(???)
+cities.remove('Austin')
 
 # Remove the last element from fruits using negative indexes
-# ??? fruits[???]
+del fruits[2]
+
+print(cities)
+print(fruits)
 
 # ---------------------------------------------------------------------
 # Task 4. Verify if an element exists in a list
@@ -72,12 +81,18 @@ print('The age of your third friend is: ', third_friend_age[11:17])
 # Given the provided list, write code that prints `YES` if the list contains the word `cheese`
 
 # The list
-# pantry = ["ham", "bread", "cheese"]
+pantry = ["ham", "bread", "cheese"]
+if 'cheese' in pantry:
+    print('Yes')
 
+s = 'cheese'
+if pantry.count(s) > 0:
+    print('Yes')
 # Write code that prints YES if the list contains "cheese".
 
-# if ??? in ???:
-    # print('YES')
+pantry = ["ham", "bread", "cheese"]
+if 'cheese' in pantry:
+    print('Yes')
        
 # ---------------------------------------------------------------------
 # Task 5. Sorting and Reversing
