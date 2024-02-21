@@ -248,4 +248,5 @@ miles = float(input("Please input the number of miles: "))
 hours = int(input("Please input the number of hours: "))
 average = miles / hours
 rounded_speed  = round(average, 1)
-print(f'The average speed is {rounded_speed} miles per hour')
+print(f'The average speed is {rounded_speed} mi les per hour')
+#

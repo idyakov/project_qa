@@ -231,3 +231,59 @@ elif student_grade_q == 303 and grade_suffix == "C" or grade_suffix == "D":
     print('You are eligible to enroll.')
 else:
     print('You are not eligible to enroll.')
+
+
+x = 5
+y =10
+if x > 3:
+    if y > x:
+        print("A")
+    else:
+        print("B")
+else:
+    print("C")
+
+
+
+x = True
+y = False
+z = x or y
+print(z)
+
+# Input boolean variable
+a = False
+
+# Print a
+print(bool(a))
+
+# Printing negation
+print(not a)
+
+x = True
+if not x:
+    print('A')
+else:
+    print('B')
+
+x = 11
+y = 10
+if x !=y:
+    print('Different')
+else:
+    print('Same')
+
+
+x = 6
+if x % 2 == 0:
+    print('Even')
+else:
+    print('Odd')
+
+
+age = 11
+if age >=18:
+    print("Adult")
+elif 13 <= age < 17:
+    print('Teen')
+else:
+    print('Child')

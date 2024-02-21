@@ -18,21 +18,21 @@
 # and the second sub-element is their age.
 
 # List 1:
-# list_1 = []
-# list_1.a???('Friend1')
-# list_1.???('Friend2')
-# list_1.???('Friend3')
+list_1 = []
+list_1.append('Friend1')
+list_1.append('Friend2')
+list_1.append('Friend3')
 
 # List 2:
-# list_2 = [???, ???, ???]
+list_2 = ['Friend1', 'Friend2', 'Friend3']
 
 # List 3:
-# list_3 = [
-#     ???,
-#     ???,
-#     ???,
-# ]
-
+ list_3 = [
+     ['Friend1', '26 age'],
+     ['Friend2', '36 age'],
+     ['Friend3', '32 age']
+ ]
+print(list_3)
 # ---------------------------------------------------------------------
 # Task 2. Retrieve elements from a List
 
