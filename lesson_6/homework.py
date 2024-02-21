@@ -28,11 +28,11 @@ list_2 = ['Friend1', 'Friend2', 'Friend3']
 
 # List 3:
  list_3 = [
-     ['Friend1', '26 age'],
-     ['Friend2', '36 age'],
-     ['Friend3', '32 age']
+     ['Brungilda', '26 age'],
+     ['Priscilla', '36 age'],
+     ['Butch', '32 age']
  ]
-print(list_3)
+#print(list_3)
 # ---------------------------------------------------------------------
 # Task 2. Retrieve elements from a List
 
@@ -41,7 +41,13 @@ print(list_3)
 # - From List 3: Retrieve the age of the last friend you put in the list.
 
 # Name of second friend
-# second_friend_name = list_2[???]
+second_friend_name = list_3
+third_friend_age = list_3
+second_friend_name_q = str(second_friend_name[1])
+second_friend_age = str(second_friend_name[1])
+third_friend_age = str(second_friend_name[2])
+print('The second name of your friend is: ', second_friend_name_q[2:11])
+print('The age of your third friend is: ', third_friend_age[11:17])
 
 # Age of the last friend of the list
 # last_friend_age = list_3[???][???]
