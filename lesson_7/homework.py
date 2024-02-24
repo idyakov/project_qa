@@ -117,12 +117,23 @@ for characters in my_string:
 
 
 
-# my_string = 's0m3 str1ng w1th numb3r5'
-# numbers = '1234567890'
+my_string = 's0m3 str1ng w1th numb3r5'
+numbers = '1234567890'
 
-# for ??? in ???:
-    # if ??? in ???:
-    #     print(character)
+for characters in my_string:
+    if characters=='0' in numbers:
+    print(characters)
+
+
+
+
+my_string = 's0m3 str1ng w1th numb3r5'
+numbers = '1234567890'
+
+for characters in my_string:
+    if characters=='0' in numbers:
+    print(characters)
+
 
 
 # Part two: Modify the code to print the first digit only
