@@ -108,6 +108,14 @@ for number in range(0, 11):
 # - Create a string to represent the numbers: numbers = '1234567890'
 # - Create a loop to iterate through characters of my_string. 
 # - If the character is a digit (`if character in numbers`) print it.
+my_string = '3catsand5tacos'
+numbers = '1234567890'
+
+for characters in my_string:
+    if characters in numbers:
+        print(characters)
+
+
 
 # my_string = 's0m3 str1ng w1th numb3r5'
 # numbers = '1234567890'
