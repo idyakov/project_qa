@@ -60,9 +60,9 @@ while counter <5 :
 # but this time do it using break.
 
 counter = 0
-while counter <5 :
+while counter <=5 :
     counter += 1
-    if counter == 5:
+    if counter == 6:
         break
     print(counter)
 
@@ -75,13 +75,14 @@ while counter <5 :
 # Figure out the values required for range() to generate the expected output.
 
 # 0, 1, 2, 3, 4, 5 (use only one argument)
-# range(???)
+(6)
 
 # 0, 1, 2, 3, 4, 5 (use two arguments: start and end)
-# range(???)
+(0, 6)
 
 # Odd numbers between 0 and 10: 1, 3, 5, 7, 9
-# range(???)
+(1, 10, 2)
+
 
 # ---------------------------------------------------------------------
 # Task 6. Using range() in a loop
@@ -90,8 +91,8 @@ while counter <5 :
 
 # Complete the following code so it prints the even numbers between 0 and 10;
 
-# for ??? in range(???):
-    # print(???)
+for number in range(0, 11):
+    print(number)
 
 
 # Exercises 🏋🏻
