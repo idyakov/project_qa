@@ -12,10 +12,10 @@
 # Complete the following code in such a way that this loop prints the characters 
 # of `name` one at a time.
 
-# name = "Joseph"
+name = "Joseph"
 
-# for ??? in ???:
-    # print(???)
+for characters in name:
+    print(characters)
 
 # ---------------------------------------------------------------------
 # Task 2. Create a basic `for` loop with a counter
@@ -23,14 +23,14 @@
 # Complete the following code in such a way that the loop increments the counter
 # and prints the number of characters in `name`name at the end.
 
-# name = 'Tom'
-# counter = ???
-
-# for ??? in ???:
-    # counter = ???
-
+name = 'Tommy'
+counter = 0
+for characters in name:
+   counter = counter  + 1
 # This should print '3'
-# print(counter)
+ print(counter)
+
+
 
 # ---------------------------------------------------------------------
 # Task 3. Create a basic 'while' loop
@@ -47,11 +47,11 @@ This should print:
 4
 5
 """
-# counter = ???
+counter = 0
 
-# while counter ???:
-    # counter = ???
-    # print(counter)
+while counter <5 :
+    counter += 1
+    print(counter)
 
 # ---------------------------------------------------------------------
 # Task 4. Exit a loop using break 🛑
@@ -59,15 +59,12 @@ This should print:
 # Take the previous example, and modify it so you exit the loop after five iterations, 
 # but this time do it using break.
 
-# counter = ???
-
-# while ???:
-    # counter = ???
-
-    # if ???:
-        # ???
-        
-    # print(counter)
+counter = 0
+while counter <5 :
+    counter += 1
+    if counter == 5:
+        break
+    print(counter)
 
 # ---------------------------------------------------------------------
 # Task 5. Range
