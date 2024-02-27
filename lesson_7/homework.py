@@ -115,8 +115,6 @@ for characters in my_string:
     if characters in numbers:
         print(characters)
 
-
-
 my_string = 's0m3 str1ng w1th numb3r5'
 numbers = '1234567890'
 
@@ -127,17 +125,22 @@ for characters in my_string:
 
 
 
-my_string = 's0m3 str1ng w1th numb3r5'
+my_string = '3catsand5tacos'
 numbers = '1234567890'
 
 for characters in my_string:
-    if characters=='0' in numbers:
-    print(characters)
+    if characters in numbers:
+        print(characters)
+
 
 
 
 # Part two: Modify the code to print the first digit only
+numbers = [1, 2, 3, 4, 5]
 
+for number in numbers:
+    print("This will only print the first number", number)
+    break
 # ---------------------------------------------------------------------
 # Exercise 2. Vowel Counter
 
@@ -145,10 +148,13 @@ for characters in my_string:
 # As a simple practice, you have been provided with a famous quote. 
 # Your task is to count and display the total number of vowels in this quote.
 
-# quote = "Life is like riding a bicycle. To keep your balance, you MUST keep moving."
-# vowel_count = 0
+quote = "Life is like riding a bicycle. To keep your balance, you MUST keep moving."
+vowel_count = 0
+for character in quote:
+    if character in 'aeiouAEIOU':
+        vowel_count += 1
+print(f"The number of vowels in the quote is: {vowel_count}")
 
-# for ??? ??? ???:
     # 'A' and 'a' are different in python, so we include both upper and lowercase
     # vowels in our comparison string to account for this difference.
     # if ??? ??? 'aeiouAEIOU':
