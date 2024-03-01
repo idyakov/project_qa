@@ -144,3 +144,9 @@ print(concurrent_num)
 # and add the repeated character to 'result'
 
 # Print the final result
+string = "312"
+result = ""
+for n in string:
+    num = int(n)
+    result += str(num) * num
+print(result)
