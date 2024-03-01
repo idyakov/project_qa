@@ -13,11 +13,24 @@
 #
 # Hint: Start with sorting the list
 
-arr = [5, 2, 9, 1, 5, 6]
-# Your code here
+# arr = [5, 2, 9, 1, 5, 6]
+# # for char in arr:
+# #     if char = char
+# print(min(arr))
+# # Your code here
 
 # ---------------------------------------------------------------------
+arr = [198, 3, 4, 9, 10, 9, 2]
 
+smallest = second_smallest = float('inf')
+for num in arr:
+    if num < smallest:
+        second_smallest = smallest
+        smallest = num
+    elif num < second_smallest and num != smallest:
+        second_smallest = num
+
+ print(smallest, second_smallest)
 # Challenge 2
 # Remove Spaces
 #
@@ -32,7 +45,15 @@ arr = [5, 2, 9, 1, 5, 6]
 
 file_name = "My Summer Photos 2023"
 # Your code here
-
+file_name = "My Summer Photos 2023"
+space = 0
+for n in file_name:
+    if n == ' ':
+        space += 1
+        print('Here is the space')
+file_name = file_name.replace(" ", "")
+print('Here is the number of spaces: ', space)
+print('Here is the line without spaces: ', file_name)
 # ---------------------------------------------------------------------
 
 # Challenge 3
@@ -47,13 +68,19 @@ file_name = "My Summer Photos 2023"
 # Initialize 'number' variable to 5. This is the number up to which we will calculate the sum.
 n = 5
 
+# Initialize 'number' variable to 5. This is the number up to which we will calculate the sum.
+number = 5
+
 # Initialize 'result' variable to 0. This variable will hold the sum.
+result = 0
 
 # Iterate through the range starting from 1 up to 'number + 1'.
-
-# Add the current value of 'i' to 'result'
+for i in range(1, number + 1):
+    # Add the current value of 'i' to 'result'
+    result += i
 
 # Print the sum of integers from 1 to 'number'
+print("Sum of digits from 1 to", number, "is:", result)
 
 
 # ---------------------------------------------------------------------
@@ -74,7 +101,15 @@ n = 5
 # Hints:
 # Use a for loop to iterate over every letter and conditional statements to check the condition
 # Use the count() method (think how it can help you solve this problem!)
+#words = 'parilomt'
 
+words = input('Enter the word: ')
+word = words.lower()
+is_isogramm = True
+for n in word:
+    if words.count(n) > 1:
+        is_isogramm = False
+print(is_isogramm)
 
 # ---------------------------------------------------------------------
 
@@ -97,12 +132,14 @@ n = 5
 string = "312"
 
 # Initialize an empty string called 'result' to store the result
+result = set()
 
 # Loop through each character in the string
-
+for n in string:
+    concurrent_num = int(n)
 # Inside the loop, turn the character into a number using int()
 # and store it as a current_num variable
-
+print(concurrent_num)
 # Multiply the character by its number value
 # and add the repeated character to 'result'
 

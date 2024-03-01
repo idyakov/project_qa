@@ -6,4 +6,11 @@
 # Examples:
 # "hello" --> "hll"
 # "goodbye" --> "gdby"
-
+s = 'Hello, World!'
+c = "aeiou"
+result = ''
+for x in s:
+    if x not in c:
+        result += x
+print(result)
+print(len(result))
