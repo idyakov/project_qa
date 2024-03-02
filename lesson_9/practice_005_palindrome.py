@@ -9,10 +9,28 @@
 
 # Hint: The following code might be useful to determine if a word is a palindrome.
 
-reversed_word = word[::-1]
+def reversed_word = word[::-1]
 
-if word == reversed_word:
+    if word == reversed_word:
+        print("True")
    # Word IS a palindrome
-else:
+    else:
+        print("False")
+    print(reversed_word)
    # Word is NOT a palindrome
 
+   #
+   # madam -> madam
+   # racecar -> racecar
+   # tacocat -> tacocat
+   #
+   # Write a program that will print True if the word is a palindrome
+   # and False if it is not.
+
+   word = input('Enter the word tacocat or something else: ')
+   reversed_word = word[::-1]
+   if word == reversed_word:
+       print("True")
+   else:
+       print("False")
+   print(reversed_word)

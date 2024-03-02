@@ -18,9 +18,19 @@
 # Prints: Hello, stranger!
 # greeting()
 
+def greeting():
+    name = input('Hey Gringo, please input your original name : ')
+    if name == '':
+        print('Hello, stranger!')
+    else:
+        print(f'Hello {name}')
+greeting()
+
 # Prints: Hello, Tom!
 # greeting('Tom')
-
+def greeting(value):
+    print(f"Hello {value}")
+greeting('Tom')
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Multiple Parameters
@@ -29,9 +39,21 @@
 # Prints: The sum of 1 + 2 = 3
 # add(1, 2)
 
+def value(a, b):
+    c = a + b
+    return c
+sum_val = value(1, 2)
+print(f'The sum of 1 + 2 = {sum_val}')
+
 # Prints (default values might be useful): The sum of 1 + 0 = 1
 # add(1)
-
+def add(a, b):
+    c = a + b
+    return c
+a = 1 #default values
+b = 0 #default values
+sum_val = add(a, b)
+print(f'The sum of {a} + {b} = {sum_val}')
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Parameters out of order
@@ -40,7 +62,8 @@
 # would still be correct.
 
 # Prints: Nelson Mandela
-# full_name("Nelson", "Mandela")
+def full_name("Nelson", "Mandela")
+    
 
 # Is there anything you can add to the line below, so the function also prints "Nelson Mandela"?
 # full_name("Mandela", "Nelson")

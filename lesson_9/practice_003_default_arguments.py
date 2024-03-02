@@ -2,8 +2,8 @@
 # The first argument should be the name of the person being greeted,
 # the second argument are the words used for the greeting.
 
-def greeting(???, ???):
-   ???
+def greeting(name, greeting='Hello, there'):
+   print(f'{greeting},{name}!')
 
 # Examples of the output expected for each function call.
 greeting("Joseph") # Prints: Hello, Joseph!
