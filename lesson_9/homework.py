@@ -62,18 +62,49 @@ print(f'The sum of {a} + {b} = {sum_val}')
 # would still be correct.
 
 # Prints: Nelson Mandela
-def full_name("Nelson", "Mandela")
-    
+def full_name():
+    a = input('Please enter the name - Nelson ')
+    b = input('Please enter the lastname - Mandela')
+    c = f' Hello Mr. {a } {b}'
+    print(c)
+
+full_name()
+
+#############other way
+def full_name(fname, lname):# paramaters of the functions
+    print(f'Hello Mr. {fname} {lname}') # Calling the value of parameters
+
+a = input('Please enter the name: ')
+b = input('Please enter the lastname: ')
+
+full_name(a, b) # Depends on the value of your input a and b
+full_name('Nelson', 'Mandela') # Directly gives a value of paramaters fname and lname
 
 # Is there anything you can add to the line below, so the function also prints "Nelson Mandela"?
 # full_name("Mandela", "Nelson")
+def full_name(first_name, last_name):
+    full_name = f"{first_name} {last_name}"
+    print(full_name)
 
+full_name("Nelson", "Mandela")
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Returning Values
 # Define a validator function that you can use to determine if a word is longer than 8 characters.
 # After creating the function, make sure to test it. Create a list of words and iterate over this
 # list using a for loop.
+def is_longer_than_8_chaaracters(word):
+    return len(word) > 8
+
+words = ['test', 'Validation', 'TestValidation', 'DataValidation8', 'te']
+
+for word in words:
+    if is_longer_than_8_chaaracters(word):
+        print(f"'{word} is longer than 8 characters. (strong)'")
+    elif len(word) > 5:
+        print(f"'{word} is not longer than 5 characters. (medium)'")
+    else:
+        print(f"'{word} is 5 or less characters. (short)")
 
 # Tip: Validator functions return True / False which we can use in conditionals to do things like print a message.
 
@@ -96,7 +127,43 @@ def full_name("Nelson", "Mandela")
 # - If the number is a multiple of 5, the function should return: Buzz
 # - Otherwise, the function should return the number.
 
+
+number = int(input())
+
+if number % 3 == 0 and number % 5 == 0:
+    print('FizzBuzz')
+elif number % 3 == 0:
+    print('Fizz')
+elif number % 5 == 0:
+    print('Buzz')
+
+else:
+    print(number)
 # Call the function here
+
+ArithmeticError
+
+def fizzbuzz(number):
+    pass
+
+
+number = 25
+#################################################################################
+
+def fizzbuzz(number):
+    if number % 3 == 0 and number % 5 == 0:
+        print('Fizzbuzz')
+    elif number % 3 == 0:
+        print('Fizz')
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
+
+
+fizzbuzz(number)
+
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -113,10 +180,17 @@ def full_name("Nelson", "Mandela")
 # - Create a function that takes two strings as arguments.
 # - Check if the lengths are equal. If they're NOT equal, return False (anagrams are always same length).
 # - Sort both strings. If the sorted versions are equal, they're anagrams!
-
+def check_word(test_str1, test_str2):
+    if (sorted(test_str1)== sorted(test_str2)) and len(test_str1) == len(test_str2):
+        print("This word is anagram.")
+    else:
+        print("This word is not anagram.")
+test_str1 = 'listen'
+test_str2 = 'silent'
 # Test your function with these strings
-test_str1 = 'abcde'
-test_str2 = 'edcba'
+
+check_word(test_str1, test_str2)
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -135,7 +209,24 @@ test_str2 = 'edcba'
 
 # Test the function with a sample list of numbers.
 
-# Output should be the maximum number in the list.
+def max_number():
+    number = my_list
+    x = sorted(number, reverse=True)
+    print(x[0])
+    # Output should be the maximum number in the list.
+my_list = [1, 7, 2, 4, 14, 3, 12]
+max_number()
+
+#other way
+def find_number(numbers):
+    result = numbers[0]
+    for number in numbers:
+        if number > result:
+            result = number
+    return result
+
+my_list = [1, 7, 2, 4, 14, 3, 12]
+print(find_number(my_list))
 
 # ----------------------------------------------------------------------------------------------------------------------
 
