@@ -24,13 +24,20 @@ def greeting():
         print('Hello, stranger!')
     else:
         print(f'Hello {name}')
+
+
 greeting()
+
 
 # Prints: Hello, Tom!
 # greeting('Tom')
 def greeting(value):
     print(f"Hello {value}")
+
+
 greeting('Tom')
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Multiple Parameters
@@ -42,18 +49,25 @@ greeting('Tom')
 def value(a, b):
     c = a + b
     return c
+
+
 sum_val = value(1, 2)
 print(f'The sum of 1 + 2 = {sum_val}')
+
 
 # Prints (default values might be useful): The sum of 1 + 0 = 1
 # add(1)
 def add(a, b):
     c = a + b
     return c
-a = 1 #default values
-b = 0 #default values
+
+
+a = 1  # default values
+b = 0  # default values
 sum_val = add(a, b)
 print(f'The sum of {a} + {b} = {sum_val}')
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Parameters out of order
@@ -65,20 +79,24 @@ print(f'The sum of {a} + {b} = {sum_val}')
 def full_name():
     a = input('Please enter the name - Nelson ')
     b = input('Please enter the lastname - Mandela')
-    c = f' Hello Mr. {a } {b}'
+    c = f' Hello Mr. {a} {b}'
     print(c)
+
 
 full_name()
 
+
 #############other way
-def full_name(fname, lname):# paramaters of the functions
-    print(f'Hello Mr. {fname} {lname}') # Calling the value of parameters
+def full_name(fname, lname):  # paramaters of the functions
+    print(f'Hello Mr. {fname} {lname}')  # Calling the value of parameters
+
 
 a = input('Please enter the name: ')
 b = input('Please enter the lastname: ')
 
-full_name(a, b) # Depends on the value of your input a and b
-full_name('Nelson', 'Mandela') # Directly gives a value of paramaters fname and lname
+full_name(a, b)  # Depends on the value of your input a and b
+full_name('Nelson', 'Mandela')  # Directly gives a value of paramaters fname and lname
+
 
 # Is there anything you can add to the line below, so the function also prints "Nelson Mandela"?
 # full_name("Mandela", "Nelson")
@@ -86,7 +104,10 @@ def full_name(first_name, last_name):
     full_name = f"{first_name} {last_name}"
     print(full_name)
 
+
 full_name("Nelson", "Mandela")
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Returning Values
@@ -95,6 +116,7 @@ full_name("Nelson", "Mandela")
 # list using a for loop.
 def is_longer_than_8_chaaracters(word):
     return len(word) > 8
+
 
 words = ['test', 'Validation', 'TestValidation', 'DataValidation8', 'te']
 
@@ -143,11 +165,14 @@ else:
 
 ArithmeticError
 
+
 def fizzbuzz(number):
     pass
 
 
 number = 25
+
+
 #################################################################################
 
 def fizzbuzz(number):
@@ -162,7 +187,6 @@ def fizzbuzz(number):
 
 
 fizzbuzz(number)
-
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -181,10 +205,12 @@ fizzbuzz(number)
 # - Check if the lengths are equal. If they're NOT equal, return False (anagrams are always same length).
 # - Sort both strings. If the sorted versions are equal, they're anagrams!
 def check_word(test_str1, test_str2):
-    if (sorted(test_str1)== sorted(test_str2)) and len(test_str1) == len(test_str2):
+    if (sorted(test_str1) == sorted(test_str2)) and len(test_str1) == len(test_str2):
         print("This word is anagram.")
     else:
         print("This word is not anagram.")
+
+
 test_str1 = 'listen'
 test_str2 = 'silent'
 # Test your function with these strings
@@ -214,10 +240,13 @@ def max_number():
     x = sorted(number, reverse=True)
     print(x[0])
     # Output should be the maximum number in the list.
+
+
 my_list = [1, 7, 2, 4, 14, 3, 12]
 max_number()
 
-#other way
+
+# other way
 def find_number(numbers):
     result = numbers[0]
     for number in numbers:
@@ -225,8 +254,10 @@ def find_number(numbers):
             result = number
     return result
 
+
 my_list = [1, 7, 2, 4, 14, 3, 12]
 print(find_number(my_list))
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -241,4 +272,13 @@ print(find_number(my_list))
 
 # Define a function is_even_odd(number) here
 
+def is_even_odd(number):
+    if number % 2 == 0:
+        print("Even number")
+    else:
+        print("odd number")
+
+number = float(input("Enter the number please: "))
+
+is_even_odd(number)
 # Test the function calling it using a variety of numbers like: 1, 10, 5.5, 9
