@@ -75,13 +75,13 @@ while counter <=5 :
 # Figure out the values required for range() to generate the expected output.
 
 # 0, 1, 2, 3, 4, 5 (use only one argument)
-(6)
+range(6)
 
 # 0, 1, 2, 3, 4, 5 (use two arguments: start and end)
-(0, 6)
+range(0, 6)
 
 # Odd numbers between 0 and 10: 1, 3, 5, 7, 9
-(1, 10, 2)
+range(1, 10, 2)
 
 
 # ---------------------------------------------------------------------
@@ -91,7 +91,7 @@ while counter <=5 :
 
 # Complete the following code so it prints the even numbers between 0 and 10;
 
-for number in range(0, 11):
+for number in range(0, 11, 2):
     print(number)
 
 
@@ -227,3 +227,10 @@ while colors[index] != 'Red':
     print(f'Found {colors[index]} cryon. Still looking for Red.')
     index += 1
 print('Found the red cryon!')
+
+
+
+
+# Task 6
+# There('s a small issue in your code. You want to print the even numbers between 0 and 10, '
+#       'but the current code prints all numbers in that range(0, 11), it should be range(0, 11, 2))
