@@ -122,6 +122,22 @@ films = {
    2020: "Bad Boys for Life"
 }
 
+if 'Black Panther' in films.values():
+    print('Yes, Black Panther is here')
+else:
+    print(('No the Black Panther is not here'))
+
+if 2021 in films:
+    print('Yes we have a 2021 movie here')
+else:
+    print('No we do not have a 2021 movie here')
+
+
+position = 1
+for year, title in films.items():
+    print(f"{position}. In {year}, the movie {title} was posted.")
+    position += 1
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Exercise 1. Animal Shelter Volunteer
@@ -136,26 +152,27 @@ films = {
 
 # Pre-code
 # Initialize the shelter_pets dictionary
-# shelter_pets = {
-#   'Whiskers': {'Age': 2, 'Type': 'Cat', 'Adopted': False},
-#   'Fido': {'Age': 4, 'Type': 'Dog', 'Adopted': True},
-#   'Patch': {'Age': 1, 'Type': 'Dog', 'Adopted': False},
-#   'Snowball': {'Age': 3, 'Type': 'Rabbit', 'Adopted': True}
-# }
+shelter_pets = {
+  'Whiskers': {'Age': 2, 'Type': 'Cat', 'Adopted': False},
+  'Fido': {'Age': 4, 'Type': 'Dog', 'Adopted': True},
+  'Patch': {'Age': 1, 'Type': 'Dog', 'Adopted': False},
+  'Snowball': {'Age': 3, 'Type': 'Rabbit', 'Adopted': True}
+}
 
 # Access and print the age of Whiskers
-# print(shelter_pets['Whiskers']['Age'])  # Should output 2
+print(shelter_pets['Whiskers']['Age'])  # Should output 2
 
 # Access and print if Patch is a dog or cat
-# print(???)
+print(shelter_pets['Patch']['Type'])
 
 # Access and print if Snowball is adopted or not
-# print(???)
+print(f'Is Snowball adopted? {shelter_pets['Snowball']['Adopted']}')
 
 # Find out which pets are not yet adopted and print their names
-# for ???, ??? in shelter_pets.i???():
-# if not info['???']:
-# print(pet)
+for pet, info in shelter_pets.items():
+    if not info['Adopted']:
+        print(pet)
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 
