@@ -64,6 +64,10 @@ employee = {
 
 # - Print a list of the employee IDs
 print(list(employee.keys()))
+
+for em_id in employee.keys():
+print(em_id)
+
 # - Print the employee data for employee with the ID 3.
 print(employee[3])
 # - Loop over the employees and print all their names and salaries.
@@ -191,31 +195,33 @@ for pet, info in shelter_pets.items():
 # Pre-code:
 # Initialize a dictionary called best_selling_books to store your collection.
 
-# best_selling_books = {
-#   1997: "Harry Potter and the Philosopher's Stone",
-#   1984: "Neuromancer",
-#   2003: "The Kite Runner",
-#   2015: "Go Set a Watchman"
-# }
+best_selling_books = {
+  1997: "Harry Potter and the Philosopher's Stone",
+  1984: "Neuromancer",
+  2003: "The Kite Runner",
+  2015: "Go Set a Watchman"
+}
 
 # The U.S. title for the Harry Potter book published in 1997 is "Harry Potter and the Sorcerer's Stone".
 # Update the title to its U.S. version.
-# best_selling_books ???  = "Harry Potter and the Sorcerer's Stone"
+best_selling_books[1997] = "Harry Potter and the Sorcerer's Stone"
 
 # New sales data reveals that "The Hunt for Red October" was the actual best-seller for 1984
 # and "The Da Vinci Code"  for 2003.
 # Update these in a single operation.
 
-# best_selling_books.u???({
-#   1984: ???
-#   ???: ???
-# ???
+best_selling_books.update({
+  1984: "The Hunt for Red October",
+  2003: "The Da Vinci Code"
+})
+
 
 # The book published in 2015, "Go Set a Watchman," is no longer considered a best-seller.
 # Use the del keyword to remove this entry from the dictionary.
+del best_selling_books[2015]
 
 # Print the updated dictionary of best selling books.
-
+print(best_selling_books)
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Exercise 3. Manage Music Collection
@@ -228,47 +234,65 @@ for pet, info in shelter_pets.items():
 # - Print both the release years and album names together.
 # - Check if a particular year or album exists in the collection.
 
-
 # Steps and pre-code
 # Initialize a dictionary to store Bob Dylan's albums
-# dylan_albums = {
-#   1962: "Bob Dylan",
-#   1963: "The Freewheelin' Bob Dylan",
-#   1975: "Blood on the Tracks",
-#   1997: "Time Out of Mind"
-# }
+dylan_albums = {
+  1962: "Bob Dylan",
+  1963: "The Freewheelin' Bob Dylan",
+  1975: "Blood on the Tracks",
+  1997: "Time Out of Mind"
+}
 
 # Use .keys() to loop through and print out all the release years
-# for year in dylan_albums.keys():
-# print(year)
-
+for year in dylan_albums.keys():
+print(year)
+#or
+print(list(dylan_albums.keys()))
 # Use .values() to loop through and print out all the album names
-
+for names in dylan_albums.values():
+    print("Album name is:", names)
 # Use .items() to loop through and print out both the release year and album name
-
 # Use the 'in' keyword to check if a particular year or album is in the dictionary (pick any year and any album)
 # Remember the keyword by default checks only the keys, not the values.
 # If you want to check if a particular value (in this case, an album name),
 # you need to specify that you're searching within the dictionary's values.
-
+for info in dylan_albums.items():
+    print(info)
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Exercise 4. Remove duplicates
 # Remove duplicates from the following dictionary:
-# person = {
-#   'first': 'Jeff',
-#   'name': 'Jeff',
-#   'last': 'Smith',
-#   'last_name': 'Smith',
-#   'state': 'CA',
-#   'age': 55
-# }
 
 # Steps:
 # - Create a dict person
 # - Create an empty dictionary result = {}
 # - Make a for loop to iterate over person dictionary
 # - If item’s value not in result dict, add key value part into result.
+
+person = {
+    'first': 'Jeff', # Considered as 'First name' with the capital F
+    'name': 'Jeff', # Remove this duplicate
+    'last': 'Smith', ## Considered as 'Last name' with the capital L
+    'last_name': 'Smith',
+    'state': 'CA',
+    'age': 55
+}
+result = []
+res = dict()
+# Here I did some modification with the First and the Last name strings
+if 'first' in person:
+    res['First name'] = person['first']
+    result.append(person['first'])
+if 'last' in person:
+    res['Last name'] = person['last']
+    result.append(person['last'])
+
+for key, val in person.items():
+    if val not in result:
+        result.append(val)
+        res[key]  = val
+
+print(res)
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -277,19 +301,23 @@ for pet, info in shelter_pets.items():
 # The function should return the name and score of the person with the highest score in the form of a dictionary.
 
 # Sample test_scores dictionary
-# test_scores = {
-#   'James': 83,
-#   'Julia': 91,
-#   'Ryan': 90,
-#   'Maria': 80,
-#   'David': 79,
-#   'Adam': 96,
-#   'Jennifer': 97,
-#   'Susan': 77
-# }
+#def find_max_score(test_scores):
+
+test_scores = {
+  'James': 83,
+  'Julia': 91,
+  'Ryan': 90,
+  'Maria': 80,
+  'David': 79,
+  'Adam': 96,
+  'Jennifer': 97,
+  'Susan': 77
+}
 
 #  Find the person with the highest test score and display both their name and score
-
+find_max_name = max(test_scores.keys())
+find_max_score = max(test_scores.values())
+print(f'{find_max_name} has the maximum score of {find_max_score}')
 # Steps:
 # - Define a function called find_max_score that takes one argument, scores_dict, which is a dictionary of names
 #   (as keys) and scores (as values).
@@ -299,3 +327,31 @@ for pet, info in shelter_pets.items():
 # - Check if the current score (v) is >= to the current maximum score
 # - If so, update the max score and assign the key-value pair to the result
 # - Return result and test the function
+
+
+
+############################
+def find_max_score(scores_dict):
+    max_score = 0
+    for key, value in test_scores.items():
+        if value >= max_score:
+            max_score = value
+            result = key, value
+    return result
+
+
+test_scores = {
+    'James': 83,
+    'Julia': 91,
+    'Ryan': 90,
+    'Maria': 80,
+    'David': 79,
+    'Adam': 96,
+    'Jennifer': 97,
+    'Susan': 77
+}
+
+max_name, max_score = find_max_score(test_scores)
+print(f'{max_name} has a high score in this class of {max_score}')
+
+
