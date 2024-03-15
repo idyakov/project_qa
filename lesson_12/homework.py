@@ -10,6 +10,18 @@
 # - Add number_of_rooms and price as instance attributes.
 # - Create print statements that show the attribute values for the instances.
 
+class HouseForSale:
+    pass
+HouseForSale1=HouseForSale() #instance 2
+HouseForSale1.number_of_rooms = 8
+HouseForSale1.price = 340000
+
+HouseForSale2=HouseForSale() #instance 2
+HouseForSale2.number_of_rooms = 9
+HouseForSale2.price = 450000
+
+print(f'The number of rooms {HouseForSale1.number_of_rooms}, and the price is {HouseForSale1.price} and on the different address the number of room is {HouseForSale2.number_of_rooms} and the price is {HouseForSale2.price}')
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Instance Methods
@@ -19,6 +31,18 @@
 #   - turn_on that prints Computer has Turned On
 #   - turn_off that prints Computer has Turned Off
 # - Create an instance of the Computer class then call each method.
+class Computer: #class Computer
+    def turn_on(self): # Instance method turn_on
+        print('Turned On')
+    def turn_off(self): # Instance method turn_off
+        print('Turn Off')
+
+    #Create instance of Computer
+pc = Computer()
+
+#To do things of instances
+pc.turn_on()
+pc.turn_off()
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -28,12 +52,43 @@
 # - Dog should have a constructor with a name parameter.
 # - Dog should have a method say_name that prints the name of the dog.
 
+class Dog:
+    def __init__(self, say_name, breed_of_dog):
+        self.name = say_name
+        self.breed_of_dog = breed_of_dog
+        print(f'The name of the Dog is {self.name} and the breed of dog is {self.breed_of_dog}')
+
+say_name = Dog("Sherlock", 'Saint Bernard')
+
+
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Inheritance
 
 # Create the classes that would make the following code possible, with the caveat that
 # both Dog and Cat must inherit from Animal.
+class Animal:
+    def __init__(self, name=None):
+        self.name = name
+
+    def say_name(self):
+        print('I dont have a name yet.')
+
+    def speak(self):
+        print("I can't speak!")
+
+class Dog(Animal):
+    def say_name(self):
+        print('Fido')
+    def speak(self):
+        print("Woof!")
+class Cat(Animal):
+    def say_name(self):
+        print('Max')
+    def speak(self):
+        print("Meow!")
 
 # animal = Animal()
 # animal.say_name()   # Prints: I don't have a name yet.
