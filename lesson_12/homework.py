@@ -74,21 +74,46 @@ class Animal:
         self.name = name
 
     def say_name(self):
-        print('I dont have a name yet.')
+        if self.name:
+            print(self.name)
+        else:
+            print("I don't have a name yet.")
 
     def speak(self):
         print("I can't speak!")
 
+
 class Dog(Animal):
-    def say_name(self):
-        print('Fido')
+    def __init__(self, name=None):
+        super().__init__(name)
+
     def speak(self):
         print("Woof!")
+
+
 class Cat(Animal):
-    def say_name(self):
-        print('Max')
+    def __init__(self, name=None):
+        super().__init__(name)
+
     def speak(self):
         print("Meow!")
+
+
+# Testing the classes
+animal = Animal()
+animal.say_name()  # Prints: I don't have a name yet.
+animal.speak()     # Prints: I can't speak!
+
+dog = Dog('Fido')
+dog.say_name()     # Prints: Fido
+dog.speak()        # Prints: Woof!
+
+cat = Cat('Max')
+cat.say_name()     # Prints: Max
+cat.speak()        # Prints: Meow!
+
+
+
 
 # animal = Animal()
 # animal.say_name()   # Prints: I don't have a name yet.
@@ -102,6 +127,40 @@ class Cat(Animal):
 # cat.say_name()      # Prints: Max
 # cat.speak()         # Prints: Meow!
 
+# THE CODE HERE
+
+class Animal:
+    def __init__(self, name = None):
+        self.name = name
+
+    def say_name(self):
+        if self.name:
+            print(self.name)
+        else:
+            print('I do not have a name yet')
+    def speak(self):
+        print('I can not speak')
+animal = Animal()
+animal.say_name()
+
+class Dog(Animal):
+    def __init__(self, name = None):
+        super().__init__(name)
+    def speak(self):
+        print("Woof!")
+dog = Dog('Fido')
+dog.speak()
+dog.say_name()
+
+class Cat(Animal):
+    def __init__(self, name = None):
+        super().__init__(name)
+    def speak(self):
+        print('Meow')
+cat = Cat('Max')
+cat.speak()
+cat.say_name()
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Exercises
@@ -112,16 +171,30 @@ class Cat(Animal):
 # Create print statements to display the attributes of each one of the instances.
 
 # Pre-code:
-# class Book:
-#    pass
-#
-# book1 = Book()
-# book1.t??? = 'To Kill a Mockingbird'
-# book1.a??? = 'Harper Lee'
-# book1.p??? = 1960
+
 
 # Your code here
+class Book:
+   pass
 
+book1 = Book()
+book1.title = 'To Kill a Mockingbird'
+book1.author = 'Harper Lee'
+book1.publication_year = 1960
+
+book2 = Book()
+book2.title = 'Napoleon'
+book2.author = 'Yuri Lermontov'
+book2.publication_year = 1812
+
+book3 = Book()
+book3.title = 'The Jungle Book'
+book3.author = 'Kipling'
+book3.publication_year = 1894
+
+print(f'The book of {book1.title} wrote down by {book1.author} in {book1.publication_year}')
+print(f'The book of {book2.title} wrote down by {book2.author} in {book2.publication_year}')
+print(f'The book of {book3.title} wrote down by {book3.author} in {book3.publication_year}')
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Exercise 2. Vehicle and Types of Vehicles
@@ -133,6 +206,28 @@ class Cat(Animal):
 # - Create Car and Bike classes that inherit from Vehicle.
 # - Create instances of Car and Bike and make them show their types.
 
+class Vehicle:
+    def __init__(self, name, type, year):
+        self.name = name
+        self.type = type
+        self.year = year
+        print(f"{name} is a {type} and made in {year}")
+    def show_type(self):
+        print(f'{self.name} is a {self.type} and made in {self.year}' )
+
+#Class car inheritance by Vehicle
+class Car(Vehicle):
+    pass
+#Class bike inheritance by Vehicle
+class Bike(Vehicle):
+    pass
+car = Car("Toyota", "SURV", 1988)
+bike = Bike("Suzuki", "sport", 1988)
+
+car.show_type()
+bike.show_type()
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Exercise 3. Spot and correct the mistakes
@@ -143,15 +238,16 @@ class Cat(Animal):
 # - Your task is to find and correct these mistakes to make the code run successfully.
 # - Please include a comment in the code explaining the corrections you made and why.
 
-# Pre-code
-# class Car:
-#    def __init__(model, year):
-#        self = model
-#        year = year
-#
-# my_car = Car("Toyota")
-# print(my_car.model)
-# print(my_car.year)
+#Pre-code
+class Car: # correct
+   def __init__(self, model, year):  # on this Constructor Method - SELF represents the instance of class  - was missed
+       self.model = model #attribute was missed before "self"
+       self.year = year #"self" for missed before attribute
+
+my_car = Car("Toyota", 1988) #   In this instance, the year attribute was missed
+print(my_car.model) # correct
+print(my_car.year) # correct
+# No inheritance
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -174,7 +270,22 @@ class Cat(Animal):
 
 # Call the send_notification() method for each instance, 
 # passing a message reminding to turn off the lights.
+class SmartHome:
+    def __init__(self, home_name, location, number_of_devices):
+        self.home_name = home_name
+        self.location = location
+        self.number_of_devices = number_of_devices
+    def send_notification(self, home_name, location):
+        self.home_name = home_name
+        self.location = location
+notification_1 = SmartHome("Villa Rosa   ", "New York   ","15 devices" )
+notification_2 = SmartHome("Green House  ", "California ", "10 devices")
+notification_3 = SmartHome("Sea View     ", "Florida    ", "20 devices")
 
+print('Home name    ', 'Location   ', 'Number of Devices')
+print(notification_1.home_name, notification_1.location, notification_1.number_of_devices)
+print(notification_2.home_name, notification_2.location, notification_2.number_of_devices)
+print(notification_3.home_name, notification_3.location, notification_3.number_of_devices)
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Exercise 5. Inheritance. Spot and correct mistakes
@@ -204,25 +315,27 @@ class Cat(Animal):
 # There are seven mistakes in the pre-code.
 
 # Pre-code
-# class Animal:
-#     def __init__(self, name, age):
-#         name = name
-#         age = age
+class Animal:
+    def __init__(self, name, age):
+        self.name = name #self before attribute has missing
+        self.age = age  # this attribute has not been diclared in the instruction
 
-# class Mammal(Animals):
-#     def __init__(self, name, age, num_legs):
-#         super().__init__(name, age)
-#         self.num_legs = num_legs
+class Mammal(Animal): # wrong class name
+    def __init__(self, name, age, num_legs):
+        super().__init__(name, age)
+        self.num_legs = num_legs
 
-# class Bird(Animal):
-#     def __init__(self, can_fly):
-#         self.can_fly = can_fly
+class Bird(Animal):
+    def __init__(self, name, age, can_fly):
+        super().__init__(name, age)
+        self.can_fly = can_fly  #wrong diclared attribute
 
-# class Fish(Mammal):
-#     def __init__(self, name, age, num_fins):
-#         super().__init__(name, age)
-#         self.num_fins = num_fins
+class Fish(Animal): # Fish should enheritance from Animal instead of Mammal
+    def __init__(self, name, age, num_fins):
+        super().__init__(name, age)
+        self.num_fins = num_fins
 
-# tiger = Mammal('Tiger', 5, 4)
-# sparrow = Bird(True)
-# goldfish = Fish('Goldfish', 2, 'Many')
+
+sparrow = Bird('Crow', 2, True) # required arguments not passed
+goldfish = Fish('Goldfish', 2, 2) #num fins should be the number instead of word "Many"
+
