@@ -30,7 +30,15 @@ def find_common_elements(list1, list2):
     common = []
     # Your code here
 
+    for f in list_1:
+        if f in list_2:
+            common.append(f)
+    return common
 
+list_1 = [1, 2, 3, 4, 5]
+list_2 = [4, 5, 6, 7, 8]
+common_elements = find_common_elements(list_1, list_2)
+print(common_elements)
 # ---------------------------------------------------------------------
 
 # Refresher
@@ -40,11 +48,11 @@ def find_common_elements(list1, list2):
 
 # Let's refresh the problem you solved in the class.
 # You have a list of recipes, where each recipe contains the ingredients each recipe needs:
-# recipes = [
-# ["yeast","flour"],
-# ["bread","meat"],
-# ["flour","meat"]
-# ]
+recipes = [
+["yeast","flour"],
+["bread","meat"],
+["flour","meat"]
+]
 
 # Solution
 def find_makeable_recipes(recipes, ingredients):
@@ -58,7 +66,6 @@ def find_makeable_recipes(recipes, ingredients):
         if can_make:
             makeable_recipes.append(recipe)
     return makeable_recipes
-
 
 test_recipes = [["yeast", "flour"], ["bread", "meat"], ["flour", "meat"]]
 test_ingredients = ["yeast", "flour", "meat"]
