@@ -195,6 +195,28 @@ ingredients = ["yeast", "flour", "meat", "salt"]
 # Find and print the best recipe
 best_recipe = find_best_recipe(recipes, ingredients)
 print(best_recipe)
+
+
+
+
+
+def find_makeable_recipes(recipes, ingredients):
+    makeable_recipes = []
+    for recipe in recipes:
+        can_make = True
+        for ingredient in recipe:
+            if ingredient not in ingredients:
+                can_make = False
+                break
+        if can_make:
+            makeable_recipes.append(recipe)
+    return makeable_recipes
+
+
+test_recipes = [["yeast", "flour"], ["bread", "meat"], ["flour", "meat"]]
+test_ingredients = ["yeast", "flour", "meat"]
+test_result = find_makeable_recipes(test_recipes, test_ingredients)
+print(test_result)
 # ---------------------------------------------------------------------
 
 # Challenge 4
@@ -290,3 +312,19 @@ print(result1)
             arr[i] = 0
 
     # Return the modified list for visualization and the count of unique elements.
+def delete_duplicates(arr):
+    if not arr:
+        return arr, 0
+    write_index = 1
+
+    for i in range(1, len(arr)):
+        if arr[i] != arr[i - 1]:
+            arr[write_index] = arr[i]  # Place it at the write_index
+            write_index += 1  # Move the write_index forward
+
+    for i in range(write_index, len(arr)):
+        arr[i] = 0
+
+input_arr = [1, 2, 2, 3, 4, 4, 4, 5]
+modified_arr, unique_count = delete_duplicates(input_arr)
+print(modified_arr, unique_count)
